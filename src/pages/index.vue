@@ -1,5 +1,11 @@
 <script setup>
 
+import {useRouter} from 'vue-router';
+
+const router = useRouter()
+  function jumpRoll(isFive) {
+    router.push(`/roll/${encodeURIComponent(isFive)}`)
+  }
 </script>
 
 <template>
@@ -8,10 +14,10 @@
       LOLM-ROLL
     </div>
     <div style="display: flex;justify-content: space-between;">
-      <div class="roll-two">
+      <div class="roll-two" @click="jumpRoll(false)">
         单人随机
       </div>
-      <div class="roll-two">
+      <div class="roll-two" @click="jumpRoll(true)">
         五人随机
       </div>
     </div>

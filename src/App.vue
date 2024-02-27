@@ -1,5 +1,4 @@
 <script setup>
-import Home from "@/components/views/home.vue";
 </script>
 
 <template>
@@ -8,7 +7,7 @@ import Home from "@/components/views/home.vue";
     align-items: center;
     width: 100vw;
     height: 80vh;">
-    <home/>
+    <router-view/>
   </main>
 </template>
 
