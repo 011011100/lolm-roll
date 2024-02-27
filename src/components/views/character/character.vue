@@ -13,6 +13,6 @@
   <img :src="ImgUrl" :alt="characterName">
 </template>
 
-<style scoped>
+<style >
 
 </style>
