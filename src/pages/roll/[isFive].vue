@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted,ref} from 'vue'
+import {onMounted, ref} from 'vue'
 import {useRoute, useRouter} from 'vue-router';
 import Character from "@/components/views/character/character.vue";
 import Position from "@/components/views/position/position.vue";
@@ -26,31 +26,43 @@ onMounted(() => {
 function roll() {
   let forNum = 1
   let fivePosition = [...rollFivePosition()];
-  if (isFive === 'true' ) {
+  let fiveCharacter = [...rollFiveCharacter()];
+  if (isFive === 'true') {
     forNum = 5
   }
   console.log(fivePosition)
-  for ( let i = 0; i < forNum; i++) {
+  for (let i = 0; i < forNum; i++) {
     let o = {
       characterRoll: "",
       positionRoll: null,
       skillRoll: [],
       talentRoll: 0,
     }
-    o.characterRoll = rollCharacter();
+    o.characterRoll = fiveCharacter[i]
     o.positionRoll = rollPosition();
-    if (isFive === 'true') {
-      o.positionRoll = fivePosition[i]
-    }
-    if (o.positionRoll === "打野"){
+    o.positionRoll = fivePosition[i]
+    if (o.positionRoll === "打野") {
       o.skillRoll = rollSkillJug()
-    }else {
+    } else {
       o.skillRoll = rollSkill();
     }
     o.talentRoll = rollTalent();
     data.value.push(o);
   }
   console.log(data)
+}
+
+// 随机英雄
+function rollFiveCharacter() {
+  let cn = [...CharacterName]
+  // 随机5个英雄
+  let rr = []
+  for (let i = 0; i < 5; i++) {
+    let number = Math.floor(Math.random() * cn.length);
+    rr.push(cn[number])
+    cn.splice(number, 1)
+  }
+  return rr;
 }
 
 // 随机英雄
@@ -95,7 +107,7 @@ function rollSkill() {
   // 复制SkillName至sn
   let sn = [...SkillName]
   // 去除惩戒
-  sn.splice(sn.length-1, 1)
+  sn.splice(sn.length - 1, 1)
   let number = Math.floor(Math.random() * sn.length);
   let n1 = sn[number];
   // 在sn中去除n1
