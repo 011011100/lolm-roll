@@ -5,7 +5,7 @@
   })
 
   const ImgUrl = computed(()=>{
-    return "/src/assets/characterImg/" + props.characterName + ".jpg"
+    return "/public/assets/characterImg/" + props.characterName + ".jpg"
   })
 </script>
 
