@@ -10,7 +10,6 @@
 </script>
 
 <template>
-  {{ImgUrl}}
   <img :src="ImgUrl" :alt="characterName">
 </template>
 
