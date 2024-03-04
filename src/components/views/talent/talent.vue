@@ -1,15 +1,19 @@
 <script setup>
-import {TalentName} from "@/components/enums/talentName.js";
+import {computed} from "vue";
 
-defineProps({
-  talent: Number
+const props = defineProps({
+  talentName: String,
+})
+
+const ImgUrl = computed(() => {
+  return "/assets/talent/" + props.talentName + ".webp"
 })
 
 </script>
 
 <template>
   <div>
-    {{ TalentName[talent]}}
+    <img :src="ImgUrl" :alt="talentName" width="64" height="64">
   </div>
 </template>
 
