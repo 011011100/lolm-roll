@@ -1,14 +1,24 @@
 <script setup>
+import {computed} from "vue";
+const props = defineProps({
+  skillName: String,
+  width: {
+    type: Number,
+    default: 64
+  },
+  height: {
+    type: Number,
+    default: 64
+  }
+})
 
-defineProps({
-  skill: String
+const ImgUrl = computed(()=>{
+  return "/assets/skill/" + props.skillName + ".webp"
 })
 </script>
 
 <template>
-  <div>
-    {{ skill }}
-  </div>
+  <img :src="ImgUrl" :alt="skillName" :width=width :height=height>
 </template>
 
 <style scoped>
