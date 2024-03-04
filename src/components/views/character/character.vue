@@ -5,11 +5,12 @@
   })
 
   const ImgUrl = computed(()=>{
-    return "src/assets/characterImg/" + props.characterName + ".jpg"
+    return "/src/assets/characterImg/" + props.characterName + ".jpg"
   })
 </script>
 
 <template>
+  {{ImgUrl}}
   <img :src="ImgUrl" :alt="characterName">
 </template>
 
