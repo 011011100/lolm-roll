@@ -1,6 +1,4 @@
 <script setup>
-import Case from '@/components/views/case.vue'
-
 const props = defineProps({
   rollData: Object,
 })

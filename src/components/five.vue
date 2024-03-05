@@ -1,7 +1,4 @@
 <script setup>
-import { computed } from 'vue'
-import Case from '@/components/views/case.vue'
-
 const props = defineProps({
   rollDataList: Array,
 })

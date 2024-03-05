@@ -1,8 +1,4 @@
 <script setup>
-import { rollUtil } from '@/components/js/rollUtil'
-import One from '@/components/views/one.vue'
-import Five from '@/components/views/five.vue'
-
 const route = useRoute()
 const isFive = route.params.isFive
 
@@ -15,8 +11,8 @@ onMounted(() => {
 
 function roll() {
   let forNum = 1
-  const fivePosition = [...rollUtil.rollFivePosition()]
-  const fiveCharacter = [...rollUtil.rollFiveCharacter()]
+  const fivePosition = [...rollFivePosition()]
+  const fiveCharacter = [...rollFiveCharacter()]
   if (isFive === 'true')
     forNum = 5
 
@@ -30,11 +26,11 @@ function roll() {
     o.characterRoll = fiveCharacter[i]
     o.positionRoll = fivePosition[i]
     if (o.positionRoll === '打野')
-      o.skillRoll = rollUtil.rollSkillJug()
+      o.skillRoll = rollSkillJug()
     else
-      o.skillRoll = rollUtil.rollSkill()
+      o.skillRoll = rollSkill()
 
-    o.talentRoll = rollUtil.rollTalent()
+    o.talentRoll = rollTalent()
     data.value.push(o)
   }
 }
