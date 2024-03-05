@@ -22,6 +22,9 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: ^2.8.0
     version: 2.8.0(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(typescript@5.3.3)
+  '@destyler/image':
+    specifier: ^0.0.2
+    version: 0.0.2(vue@3.4.21)
   '@unocss/reset':
     specifier: ^0.58.5
     version: 0.58.5
@@ -522,7 +525,19 @@ packages:
       vue: 3.4.21(typescript@5.3.3)
     transitivePeerDependencies:
       - '@vue/composition-api'
-    dev: false
+
+  /@destyler/image@0.0.2(vue@3.4.21):
+    resolution: {integrity: sha512-lNccCNBLcX+P/TmZRaEfUqGAyvIW2APs/H6q8LViPr2dxW707jYfjnCKd4XTEMOwkeGoo7IbdJNYmRah2RHhLA==}
+    peerDependencies:
+      vue: '>=3.3.4'
+    dependencies:
+      '@destyler/composition': 0.0.2(vue@3.4.21)
+      '@destyler/primitive': 0.0.2(vue@3.4.21)
+      '@destyler/shared': 0.0.2(vue@3.4.21)
+      vue: 3.4.21(typescript@5.3.3)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: true
 
   /@destyler/primitive@0.0.2(vue@3.4.21):
     resolution: {integrity: sha512-urASfq57qfumgB/RZJCtSXGzj8idCEFnt98weHaqozmDGpLkf5qB3hQ6sTTHFH7svqnAHbpZLtgd8Wa4DBKgyg==}
@@ -534,7 +549,6 @@ packages:
       vue: 3.4.21(typescript@5.3.3)
     transitivePeerDependencies:
       - '@vue/composition-api'
-    dev: false
 
   /@destyler/shared@0.0.2(vue@3.4.21):
     resolution: {integrity: sha512-H06qn3FWXKmh4IIjiGwxsg5IweCOlVfElm7pZIOpi54bhKCXN1ZyQr3wp/pCFEOtXe6k2TocGyHC80XkFQZBMw==}
@@ -543,7 +557,6 @@ packages:
     dependencies:
       '@internationalized/date': 3.5.2
       vue: 3.4.21(typescript@5.3.3)
-    dev: false
 
   /@es-joy/jsdoccomment@0.42.0:
     resolution: {integrity: sha512-R1w57YlVA6+YE01wch3GPYn6bCsrOV3YW/5oGGE2tmX6JcL9Nr+b5IikrjMPF+v9CV3ay+obImEdsDhovhJrzw==}
@@ -829,7 +842,6 @@ packages:
     resolution: {integrity: sha512-vo1yOMUt2hzp63IutEaTUxROdvQg1qlMRsbCvbay2AK2Gai7wIgCyK5weEX3nHkiLgo4qCXHijFNC/ILhlRpOQ==}
     dependencies:
       '@swc/helpers': 0.5.6
-    dev: false
 
   /@jridgewell/gen-mapping@0.3.5:
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
@@ -1057,7 +1069,6 @@ packages:
     resolution: {integrity: sha512-aYX01Ke9hunpoCexYAgQucEpARGQ5w/cqHFrIR+e9gdKb1QWTsVJuTJ2ozQzIAxLyRQe/m+2RqzkyOOGiMKRQA==}
     dependencies:
       tslib: 2.6.2
-    dev: false
 
   /@types/eslint@8.56.5:
     resolution: {integrity: sha512-u5/YPJHo1tvkSF2CE0USEkxon82Z5DBy2xR+qfyYNszpX9qcs4sT6uq2kBbj4BXY1+DBGDPnrhMZV3pKWGNukw==}
@@ -1761,7 +1772,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       tslib: 2.6.2
-    dev: false
 
   /array-union@2.1.0:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
@@ -2046,7 +2056,6 @@ packages:
 
   /defu@6.1.4:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
-    dev: false
 
   /destr@2.0.3:
     resolution: {integrity: sha512-2N3BOUU4gYMpTP24s5rF5iP7BDr7uNTCs4ozw3kf/eKfvWSIu93GEBi5m427YoyJoeOzQ5smuu4nNAPGb8idSQ==}

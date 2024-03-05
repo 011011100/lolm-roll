@@ -15,7 +15,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <Character :character-name="props.rollData.characterRoll" />
+  <Character :name="props.rollData.characterRoll" />
   <div class="flex justify-between">
     <Talent :talent-name="props.rollData.talentRoll" />
     <Position :portion="props.rollData.positionRoll" />
