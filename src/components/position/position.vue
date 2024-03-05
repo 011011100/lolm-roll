@@ -1,10 +1,7 @@
 <script setup>
-import {PositionName} from "@/components/enums/positionName.js";
-
 defineProps({
-  portion: String
+  portion: String,
 })
-
 </script>
 
 <template>

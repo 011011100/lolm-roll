@@ -1,20 +1,34 @@
 {
   "name": "lolm-roll",
-  "version": "0.0.0",
-  "private": true,
   "type": "module",
+  "private": true,
+  "vite": {
+    "server": {
+      "port": 3333
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --port 8766",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@destyler/button": "^0.0.2",
+    "@vueuse/core": "^10.9.0",
+    "unocss": "^0.58.5",
     "vue": "^3.4.15"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.8.0",
+    "@unocss/reset": "^0.58.5",
     "@vitejs/plugin-vue": "^5.0.3",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
     "unplugin-vue-router": "^0.8.4",
     "vite": "^5.0.11",
+    "vite-plugin-package-configs": "^0.0.12",
     "vite-plugin-vue-devtools": "^7.0.15",
     "vue-router": "^4.3.0"
   }
