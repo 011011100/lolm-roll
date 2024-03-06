@@ -17,6 +17,9 @@ dependencies:
   vue:
     specifier: ^3.4.15
     version: 3.4.21(typescript@5.3.3)
+  vue-router:
+    specifier: ^4.3.0
+    version: 4.3.0(vue@3.4.21)
 
 devDependencies:
   '@antfu/eslint-config':
@@ -49,9 +52,6 @@ devDependencies:
   vite-plugin-vue-devtools:
     specifier: ^7.0.15
     version: 7.0.16(vite@5.1.5)(vue@3.4.21)
-  vue-router:
-    specifier: ^4.3.0
-    version: 4.3.0(vue@3.4.21)
 
 packages:
 
@@ -1624,7 +1624,6 @@ packages:
 
   /@vue/devtools-api@6.6.1:
     resolution: {integrity: sha512-LgPscpE3Vs0x96PzSSB4IGVSZXZBZHpfxs+ZA1d+VEPwHdOXowy/Y2CsvCAIFrf+ssVU1pD1jidj505EpUnfbA==}
-    dev: true
 
   /@vue/devtools-core@7.0.16(vite@5.1.5)(vue@3.4.21):
     resolution: {integrity: sha512-GGHZSvQcVyBYzkBOOBwA+xKtG2DCA7InFxjbaTfUERRDPFWFOOBdf1xe1FtiZRkU+vHnF8NqKnz+78HpnzD02w==}
@@ -4236,7 +4235,6 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.6.1
       vue: 3.4.21(typescript@5.3.3)
-    dev: true
 
   /vue@3.4.21(typescript@5.3.3):
     resolution: {integrity: sha512-5hjyV/jLEIKD/jYl4cavMcnzKwjMKohureP8ejn3hhEjwhWIhWeuzL2kJAjzl/WyVsgPY56Sy4Z40C3lVshxXA==}
