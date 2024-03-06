@@ -8,6 +8,7 @@ import Devtools from 'vite-plugin-vue-devtools'
 import PKG from 'vite-plugin-package-configs'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import UnoCss from 'unocss/vite'
+import { DestylerImageResolver } from '@destyler/image/resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,13 +19,16 @@ export default defineConfig({
   },
   plugins: [
     VueRouter({
-      dts: false,
+      dts: true,
     }),
     Devtools(),
     Vue(),
     PKG(),
     Components({
-      dts: false,
+      resolvers: [
+        DestylerImageResolver(),
+      ],
+      dts: true,
     }),
     UnoCss(),
     AutoImport({
@@ -37,7 +41,7 @@ export default defineConfig({
           'vue-router/auto': ['useLink'],
         },
       ],
-      dts: false,
+      dts: true,
       dirs: [
         './src/composables',
       ],
