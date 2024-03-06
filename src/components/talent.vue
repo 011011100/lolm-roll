@@ -1,14 +1,11 @@
 <script setup>
-import {computed} from "vue";
-
 const props = defineProps({
   talentName: String,
 })
 
 const ImgUrl = computed(() => {
-  return "/assets/talent/" + props.talentName + ".webp"
+  return `/assets/talent/${props.talentName}.webp`
 })
-
 </script>
 
 <template>

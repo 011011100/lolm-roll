@@ -2,18 +2,7 @@
 </script>
 
 <template>
-  <main style="display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 80vh;">
-    <router-view/>
+  <main class="flex justify-center items-center w-100vw h-80vh">
+    <router-view />
   </main>
 </template>
-
-<style>
-html, body {
-  padding: 0;
-  margin: 0;
-}
-</style>
