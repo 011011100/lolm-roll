@@ -1,6 +1,4 @@
 <script setup>
-import { DestylerImage, DestylerImageFallback, DestylerImageRoot } from '@destyler/image'
-
 const props = defineProps({
   name: {
     type: String,
