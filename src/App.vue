@@ -2,7 +2,19 @@
 </script>
 
 <template>
-  <main class="flex justify-center items-center w-100vw h-80vh">
+  <main class="app-main">
     <router-view />
   </main>
 </template>
+
+<style scoped>
+.app-main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+</style>

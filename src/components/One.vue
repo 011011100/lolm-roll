@@ -5,7 +5,15 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="one-layout">
     <Case :roll-data="props.rollData" />
   </div>
 </template>
+
+<style scoped>
+.one-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>

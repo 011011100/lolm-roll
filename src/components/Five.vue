@@ -29,15 +29,35 @@ const sort = computed(() => {
 </script>
 
 <template>
-  <div
-    v-for="index of sort"
-    :key="index"
-    class="flex px-2 flex-col"
-  >
-    <Case :roll-data="index" />
+  <div class="five-layout">
+    <div
+      v-for="(index, i) of sort"
+      :key="i"
+      class="five-item"
+    >
+      <Case :roll-data="index" compact />
+    </div>
   </div>
 </template>
 
-<style>
+<style scoped>
+.five-layout {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  overflow-x: auto;
+  padding: 8px;
+  box-sizing: border-box;
+}
 
+.five-item {
+  flex: 0 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .five-layout {
+    justify-content: center;
+    overflow-x: visible;
+  }
+}
 </style>
