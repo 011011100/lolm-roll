@@ -37,7 +37,7 @@ function roll() {
 </script>
 
 <template>
-  <div style="display: flex">
+  <div class="roll-page">
     <template v-if="isFive === 'true'">
       <Five :roll-data-list="data" />
     </template>
@@ -47,6 +47,10 @@ function roll() {
   </div>
 </template>
 
-<style>
-
+<style scoped>
+.roll-page {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 </style>

@@ -11,12 +11,20 @@ const props = defineProps({
       }
     },
   },
+  compact: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
 <template>
-  <Character :name="props.rollData.characterRoll" />
-  <div class="flex justify-between">
+  <Character
+    :name="props.rollData.characterRoll"
+    :width="props.compact ? 140 : 308"
+    :height="props.compact ? 250 : 560"
+  />
+  <div class="info-row">
     <Talent :talent-name="props.rollData.talentRoll" />
     <Position :portion="props.rollData.positionRoll" />
     <div class="flex">
@@ -26,6 +34,9 @@ const props = defineProps({
   </div>
 </template>
 
-<style>
-
+<style scoped>
+.info-row {
+  display: flex;
+  justify-content: space-between;
+}
 </style>
