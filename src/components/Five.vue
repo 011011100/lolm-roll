@@ -31,11 +31,12 @@ const sort = computed(() => {
 </script>
 
 <template>
-  <div class="five-layout">
+  <div class="five-layout" role="list" aria-label="五人随机阵容">
     <div
       v-for="(index, i) of sort"
       :key="i"
       class="five-item"
+      role="listitem"
     >
       <Case :roll-data="index" compact />
     </div>
@@ -44,22 +45,32 @@ const sort = computed(() => {
 
 <style scoped>
 .five-layout {
-  display: flex;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
   width: 100%;
-  overflow-x: auto;
-  padding: 8px;
-  box-sizing: border-box;
 }
 
 .five-item {
-  flex: 0 0 auto;
+  min-width: 0;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1000px) {
   .five-layout {
-    justify-content: center;
-    overflow-x: visible;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .five-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .five-layout {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 </style>

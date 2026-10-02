@@ -12,8 +12,7 @@ const props = defineProps({
 
 <style scoped>
 .one-layout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: min(100%, 370px);
+  margin-inline: auto;
 }
 </style>

@@ -23,17 +23,39 @@ const imgUrl = computed(() => {
 })
 const rootStyle = computed(() => {
   return {
-    width: `${props.width}px`,
-    height: `${props.height}px`,
+    aspectRatio: `${props.width} / ${props.height}`,
   }
 })
 </script>
 
 <template>
-  <DestylerImageRoot :style="rootStyle" class="block overflow-hidden">
-    <DestylerImage :src="imgUrl" :alt="props.name" class="w-full h-full object-cover" />
-    <DestylerImageFallback class="flex h-full w-full items-center justify-center rounded-full ">
+  <DestylerImageRoot :style="rootStyle" class="character-portrait">
+    <DestylerImage :src="imgUrl" :alt="props.name" class="portrait-image" />
+    <DestylerImageFallback class="portrait-fallback">
       {{ props.name }}
     </DestylerImageFallback>
   </DestylerImageRoot>
 </template>
+
+<style scoped>
+.character-portrait {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.portrait-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.portrait-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-gold);
+}
+</style>
