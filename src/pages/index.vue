@@ -46,6 +46,7 @@ function jumpRoll(isFive) {
 
 .home {
   width: min(100%, 960px);
+  margin: 0 auto;
 }
 
 .title {
@@ -58,6 +59,7 @@ function jumpRoll(isFive) {
   justify-content: space-between;
   gap: 12px;
   margin-top: 24px;
+  width: 100%;
 }
 
 .action-btn {
@@ -67,6 +69,21 @@ function jumpRoll(isFive) {
 @media (max-width: 640px) {
   .action-row {
     flex-direction: column;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+
+  .action-row {
+    margin-top: 12px;
+    gap: 8px;
+  }
+
+  .action-btn {
+    font-size: clamp(1.2rem, 3.5vw, 2rem);
   }
 }
 </style>

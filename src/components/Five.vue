@@ -50,16 +50,25 @@ const sort = computed(() => {
   overflow-x: auto;
   padding: 8px;
   box-sizing: border-box;
+  scroll-snap-type: x mandatory;
 }
 
 .five-item {
   flex: 0 0 auto;
+  scroll-snap-align: start;
 }
 
 @media (min-width: 1024px) {
   .five-layout {
     justify-content: center;
     overflow-x: visible;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .five-layout {
+    gap: 6px;
+    padding: 4px;
   }
 }
 </style>
