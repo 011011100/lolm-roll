@@ -1,3 +1,5 @@
+import { ref } from 'vue'
+
 export const PositionName = ref([
   '上单',
   '打野',

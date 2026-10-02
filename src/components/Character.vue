@@ -1,4 +1,6 @@
 <script setup>
+import { computed } from 'vue'
+
 const props = defineProps({
   name: {
     type: String,
@@ -28,8 +30,8 @@ const rootStyle = computed(() => {
 </script>
 
 <template>
-  <DestylerImageRoot :style="rootStyle">
-    <DestylerImage :src="imgUrl" :alt="props.name" class="w-full h-full" />
+  <DestylerImageRoot :style="rootStyle" class="block overflow-hidden">
+    <DestylerImage :src="imgUrl" :alt="props.name" class="w-full h-full object-cover" />
     <DestylerImageFallback class="flex h-full w-full items-center justify-center rounded-full ">
       {{ props.name }}
     </DestylerImageFallback>

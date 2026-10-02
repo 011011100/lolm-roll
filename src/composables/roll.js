@@ -1,3 +1,8 @@
+import { CharacterName } from './characterName.js'
+import { PositionName } from './positionName.js'
+import { SkillName } from './skillName.js'
+import { TalentName } from './talentName.js'
+
 export function rollFiveCharacter() {
   const cn = [...CharacterName.value]
   // 随机5个英雄
@@ -31,7 +36,7 @@ export function rollFivePosition() {
 
 // 随机位置
 export function rollPosition() {
-  return PositionName.value[Math.floor(Math.random() * PositionName.length)]
+  return PositionName.value[Math.floor(Math.random() * PositionName.value.length)]
 }
 
 // 随机召唤师技能

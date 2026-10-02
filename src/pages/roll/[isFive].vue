@@ -1,4 +1,8 @@
 <script setup>
+import { onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router/auto'
+import { rollFiveCharacter, rollFivePosition, rollSkill, rollSkillJug, rollTalent } from '../../composables/roll.js'
+
 const route = useRoute()
 const isFive = route.params.isFive
 

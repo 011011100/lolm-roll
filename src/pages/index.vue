@@ -1,5 +1,6 @@
 <script setup>
 import { DestylerButton } from '@destyler/button'
+import { useRouter } from 'vue-router/auto'
 
 const router = useRouter()
 

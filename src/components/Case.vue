@@ -24,7 +24,7 @@ const props = defineProps({
     :width="props.compact ? 140 : 308"
     :height="props.compact ? 250 : 560"
   />
-  <div class="info-row">
+  <div class="info-row" :class="{ 'info-row-compact': props.compact }">
     <Talent :talent-name="props.rollData.talentRoll" />
     <Position :portion="props.rollData.positionRoll" />
     <div class="flex">
@@ -38,5 +38,16 @@ const props = defineProps({
 .info-row {
   display: flex;
   justify-content: space-between;
+}
+
+.info-row-compact {
+  width: 140px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.info-row-compact :deep(img) {
+  width: 32px;
+  height: 32px;
 }
 </style>

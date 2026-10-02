@@ -1,0 +1,73 @@
+{
+  "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/js/rune/rune.js",
+  "version": "7.3",
+  "fileTime": "2026-09-29 16:09:43",
+  "checkedAt": "2026-10-02",
+  "runes": [
+    {
+      "name": "电击",
+      "path": "/assets/talent/电击.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_Electrocute.png"
+    },
+    {
+      "name": "黑暗收割",
+      "path": "/assets/talent/黑暗收割.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_hasg.png"
+    },
+    {
+      "name": "强攻",
+      "path": "/assets/talent/强攻.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_PresstheAttack.png"
+    },
+    {
+      "name": "致命节奏",
+      "path": "/assets/talent/致命节奏.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_LethalTempo.png"
+    },
+    {
+      "name": "迅捷步法",
+      "path": "/assets/talent/迅捷步法.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_FleetofFoot.png"
+    },
+    {
+      "name": "征服者",
+      "path": "/assets/talent/征服者.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_Conqueror.png"
+    },
+    {
+      "name": "不灭之握",
+      "path": "/assets/talent/不灭之握.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_GraspoftheUndying.png"
+    },
+    {
+      "name": "守护者",
+      "path": "/assets/talent/守护者.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_Guardian.png"
+    },
+    {
+      "name": "艾黎",
+      "path": "/assets/talent/艾黎.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_Aery.png"
+    },
+    {
+      "name": "奥术彗星",
+      "path": "/assets/talent/奥术彗星.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_ArcaneComet.png"
+    },
+    {
+      "name": "相位猛冲",
+      "path": "/assets/talent/相位猛冲.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_PhaseRush.png"
+    },
+    {
+      "name": "先攻",
+      "path": "/assets/talent/先攻.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_FirstStrike.png"
+    },
+    {
+      "name": "冰霜领主",
+      "path": "/assets/talent/冰霜领主.png",
+      "source": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/RuneIcons/Keystone_FrostLord.png"
+    }
+  ]
+}

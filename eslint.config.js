@@ -9,5 +9,6 @@ export default antfu({
     '.vscode',
     'shims.d.ts',
     'tsconfig.json',
+    'vite.config.js.timestamp-*.mjs',
   ],
 })

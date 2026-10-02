@@ -1,3 +1,5 @@
+import { ref } from 'vue'
+
 export const SkillName = ref([
   '幽灵疾步',
   '治疗术',
