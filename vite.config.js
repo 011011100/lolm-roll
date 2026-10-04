@@ -1,4 +1,5 @@
 import { URL, fileURLToPath } from 'node:url'
+import process from 'node:process'
 import { defineConfig } from 'vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -12,6 +13,16 @@ import { DestylerImageResolver } from '@destyler/image/resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: 3333,
+    strictPort: true,
+    proxy: {
+      '/api': {
+        target: `http://127.0.0.1:${process.env.API_PORT || 3000}`,
+        changeOrigin: false,
+      },
+    },
+  },
   resolve: {
     alias: {
       '~': fileURLToPath(new URL('./src', import.meta.url)),

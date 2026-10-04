@@ -37,11 +37,11 @@ function jumpRoll(isFive) {
         </DestylerButton>
         <DestylerButton
           class="action-btn action-btn-secondary"
-          @click="jumpRoll(true)"
+          @click="router.push('/room')"
         >
           <span class="action-copy">
             <span class="action-label">五人随机</span>
-            <span class="action-caption">五个人的默契挑战</span>
+            <span class="action-caption">房间组队，各看各的结果</span>
           </span>
           <span class="action-arrow" aria-hidden="true">↗</span>
         </DestylerButton>

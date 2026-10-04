@@ -1,11 +1,4 @@
 import { ref } from 'vue'
+import { SKILL_NAMES } from '../../shared/pools.js'
 
-export const SkillName = ref([
-  '幽灵疾步',
-  '治疗术',
-  '屏障',
-  '虚弱',
-  '闪现',
-  '引燃',
-  '惩戒',
-])
+export const SkillName = ref([...SKILL_NAMES])

@@ -1,9 +1,4 @@
 import { ref } from 'vue'
+import { POSITION_NAMES } from '../../shared/pools.js'
 
-export const PositionName = ref([
-  '上单',
-  '打野',
-  '中单',
-  '射手',
-  '辅助',
-])
+export const PositionName = ref([...POSITION_NAMES])

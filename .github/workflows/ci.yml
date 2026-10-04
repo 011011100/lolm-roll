@@ -31,5 +31,17 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Room integration tests
+        run: pnpm test
+
       - name: Build and check assets
         run: pnpm build
+
+      - name: Check production container
+        run: |
+          docker build --tag lolm-roll:test .
+          docker run --detach --name lolm-roll-test --publish 127.0.0.1:3000:3000 lolm-roll:test
+          trap 'docker logs lolm-roll-test; docker rm --force lolm-roll-test' EXIT
+          curl --fail --retry 10 --retry-delay 1 --retry-connrefused http://127.0.0.1:3000/api/health
+          curl --fail --output /dev/null http://127.0.0.1:3000/room/123456
+          curl --fail --output /dev/null --request POST --header 'Content-Type: application/json' --data '{}' http://127.0.0.1:3000/api/rooms
